@@ -1,26 +1,24 @@
 # DutchTreat
 
-TODO: Write a gem description
+DutchTreat is a simple gem for splitting the expense among people during a group trip.
 
 ## Installation
 
-Add this line to your application's Gemfile:
-
 ```ruby
-gem 'dutch_treat'
+gem 'dutch_treat', git: ''
 ```
 
 And then execute:
 
     $ bundle
 
-Or install it yourself as:
-
-    $ gem install dutch_treat
-
 ## Usage
 
-TODO: Write usage instructions here
+clone the repo and run the tests see the examples
+
+    $ rake test
+
+TODO: Document usage
 
 ## Contributing
 
