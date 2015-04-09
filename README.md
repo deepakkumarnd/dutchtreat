@@ -5,7 +5,7 @@ DutchTreat is a simple gem for splitting the expense among people during a group
 ## Installation
 
 ```ruby
-gem 'dutch_treat', git: ''
+gem 'dutch_treat', git: 'git@github.com:42races/dutchtreat.git'
 ```
 
 And then execute:
