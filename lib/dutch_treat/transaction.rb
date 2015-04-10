@@ -6,15 +6,20 @@ module DutchTreat
       @participants = participants
     end
 
-    def settle
-      if even? # the amount is divided equally
+    def settle!
+      if even?
         cost_per_head = total_cost / participant_count
         set_balance_for_all!(cost_per_head)
         sort_participants_by_balance!
         settle_balance!
+      else
+        # to be solved, contribute here
       end
     end
 
+    private
+
+    # total amount is to be devided equally
     def even?
       @participants.all? { |p| p.my_cost == 0 }
     end
@@ -26,8 +31,6 @@ module DutchTreat
     def participant_count
       @participants.size
     end
-
-    private
 
     def set_balance_for_all!(cost_per_head)
       @participants.each do |p|

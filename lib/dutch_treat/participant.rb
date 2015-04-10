@@ -6,8 +6,9 @@ class Participant
   # amout_paid is to be set before every transaction
   attr_accessor :amount_paid, :my_cost, :balance
 
-  # settlement information collected here
-  # they are weighted edges formed after each transaction
+  # settlement information collected in @to_give and @to_get
+  # they are array of weighted edges formed after each transaction
+  # each edge contains [participant, amount]
   attr_accessor :to_give, :to_get
 
   def initialize(name)
@@ -39,13 +40,12 @@ class Participant
 
   # TODO display methods to be removed/moved to documentation
 
-  def borrowings
+  def print_settlement_details
+    puts "\n********#{name}********"
     @to_give.each do |p, amount|
       puts "Give #{amount} to #{p.name}"
     end
-  end
 
-  def lendings
     @to_get.each do |p, amount|
       puts "Get #{amount} from #{p.name}"
     end
