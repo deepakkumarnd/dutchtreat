@@ -1,38 +1,5 @@
 module DutchTreat
 
-  class Participant
-    attr_reader :name, :lendings, :borrowings
-    attr_accessor :amount_paid, :balance, :my_cost, :to_give, :to_get
-
-    def initialize(name)
-      @name        = name
-      @amount_paid = 0
-      @balance     = 0
-      @my_cost     = 0
-
-      @to_give     = []
-      @to_get      = []
-    end
-
-    def clear?
-      balance == 0
-    end
-
-    def borrowings
-      p "borrowings"
-      @to_give.each do |p, amount|
-        puts "Give #{amount} to #{p.name}"
-      end
-    end
-
-    def lendings
-      p "lendings"
-      @to_get.each do |p, amount|
-        puts "Get #{amount} from #{p.name}"
-      end
-    end
-  end
-
   class Transaction
 
     def initialize(participants)
